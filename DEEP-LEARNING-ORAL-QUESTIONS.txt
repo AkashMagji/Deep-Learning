@@ -1,0 +1,67 @@
+DEEP LEARNING ORAL QUESTIONS
+
+1.
+i. Keras: Keras is an open-source high-level neural networks API written in Python. It was designed to be user-friendly and efficient, making it a popular choice for both beginners and experienced deep learning practitioners. Keras provides a simple and intuitive interface to build, train, and deploy neural networks. It is not a standalone framework but can be integrated with backends such as TensorFlow, Theano, and Microsoft Cognitive Toolkit (CNTK). Keras has a focus on ease of use, making it a great choice for rapid prototyping and experimentation.
+ii. PyTorch: PyTorch is an open-source deep learning framework developed by Facebook's AI Research (FAIR) team. It is known for its dynamic computation graph, which allows for more flexibility in model design and debugging. PyTorch is popular for its Pythonic and imperative programming style, making it easy to work with and debug. It has gained significant popularity in the research community due to its support for dynamic graphs, which is helpful for creating more complex and adaptive neural network architectures.
+iii. TensorFlow: TensorFlow is an open-source deep learning framework developed by Google Brain. It is one of the most widely used and comprehensive deep learning libraries. TensorFlow provides a static computation graph, which is efficient for deployment and optimization. It is known for its scalability and can be used for a wide range of applications, including deep learning, machine learning, and numerical computations. TensorFlow 2.0 and later versions also include a more user-friendly high-level API for ease of use.
+iv. Theano: Theano was an open-source numerical computation library that was widely used for deep learning and scientific computing. It allowed users to define, optimize, and evaluate mathematical expressions involving multi-dimensional arrays efficiently. Theano was developed by the Montreal Institute for Learning Algorithms (MILA) at the University of Montreal. While Theano was popular in the past, it is no longer actively developed or maintained, and its use has significantly declined in favor of newer frameworks like TensorFlow and PyTorch.
+2.
+Feedforward neural networks
+A feedforward neural network, also known as a feedforward artificial neural network or a multilayer perceptron (MLP), is a fundamental type of artificial neural network used in machine learning and deep learning. It's called "feedforward" because the information flows in one direction, from the input layer to the output layer, without forming any cycles or loops within the network.
+Define the network architecture using Keras
+In Keras, you can define a neural network architecture by creating and configuring a model. Keras provides a simple and high-level API for building various types of neural networks.
+Hidden layer 
+This is the intermediate layer, which is concealed between the input and output layers. This layer has a large number of neurons that perform alterations on the inputs. They then communicate with the output layer.
+Cost Function in Feedforward Neural Network 
+The cost function is an important factor of a feedforward neural network. Generally, minor adjustments to weights and biases have little effect on the categorized data points. Thus, to determine a method for improving performance by making minor adjustments to weights and biases using a smooth cost function.
+Loss Function in Feedforward Neural Network
+A loss function is a function that compares the target and predicted output values; measures how well the neural network models the training data. When training, we aim to minimize this loss between the predicted and target outputs.
+Gradient Learning Algorithm
+Gradient Descent Algorithm repeatedly calculates the next point using gradient at the current location, then scales it (by a learning rate) and subtracts achieved value from the current position (makes a step) (makes a step). It subtracts the value since we want to decrease the function (to increase it would be adding) (to maximize it would be adding).
+3.
+Architecture of CNN
+The architecture of a Convolutional Neural Network (CNN) is a specialized type of neural network designed for processing and classifying visual data, such as images and videos. CNNs are particularly effective for image-related tasks due to their ability to automatically learn and extract features from the data. Here are the key components and architectural details of a typical CNN:
+Input Layer:
+The input layer receives the raw image data. Each neuron in the input layer corresponds to a pixel or a group of pixels, depending on the chosen input size.
+Convolutional Layers:
+Convolutional layers are the core building blocks of CNNs. They apply a set of learnable filters (also known as kernels) to the input image to detect various features, such as edges, textures, and patterns. The filters slide (convolve) over the input image, and their weights are learned during training. Convolutional layers can have multiple filters, and each filter creates a feature map. Non-linear activation functions, such as ReLU (Rectified Linear Unit), are often applied after convolution to introduce non-linearity.
+Pooling Layers (subsampling):
+Pooling layers are used to reduce the spatial dimensions of the feature maps produced by the convolutional layers. Common pooling operations include max pooling and average pooling, which reduce the size of the feature maps while preserving essential information. Pooling helps in reducing the computational complexity and controlling overfitting.
+Fully Connected Layers:
+After convolution and pooling layers, one or more fully connected layers are typically added. These layers connect all the neurons from the previous layers to the output layer. Fully connected layers perform high-level feature extraction and classification. Non-linear activation functions (e.g., ReLU) are applied to the outputs of fully connected layers.
+ReLU
+ReLU stands for the rectified linear unit. Once the feature maps are extracted, the next step is to move them to a ReLU layer. ReLU performs an element-wise operation and sets all the negative pixels to 0. It introduces non-linearity to the network, and the generated output is a rectified feature map.
+4.
+Autoencoder Architecture
+An Autoencoder is a type of neural network that can learn to reconstruct images, text, and other data from compressed versions of themselves. An Autoencoder consists of three layers: 
+1. Encoder
+ The Encoder layer compresses the input image into a latent space representation. It encodes the input image as a compressed representation in a reduced dimension. The compressed image is a distorted version of the original image.
+2. Code 
+The Code layer represents the compressed input fed to the decoder layer. 
+3. Decoder
+The decoder layer decodes the encoded image back to the original dimension. The decoded image is reconstructed from latent space representation, and it is reconstructed from the latent space representation and is a lossy reconstruction of the original image.
+Unsupervised learning
+Unsupervised learning is another machine learning method in which patterns inferred from the unlabeled input data. The goal of unsupervised learning is to find the structure and patterns from the input data. Unsupervised learning does not need any supervision. Instead, it finds patterns from the data by its own.
+Supervised Learning
+Supervised learning is a type of machine learning where an algorithm learns from a labeled dataset, which means it is provided with input data along with corresponding correct output labels during the training phase. The goal of supervised learning is to learn a mapping or relationship between the input and output data so that the algorithm can make predictions or classifications on new, unseen data.
+CBOW (Continuous Bag of Words):
+ The CBOW model tries to understand the context of the words and takes this as input. It then tries to predict words that are contextually accurate. 1. CBOW model predicts the current word given context words within a specific window. 2. The input layer contains the context words and the output layer contains the current word. 3. The hidden layer contains the number of dimensions in which we want to represent the current word present at the output layer.
+
+Skip Gram : 
+Skip gram predicts the surrounding context words within specific window given current word. The input layer contains the current word and the output layer contains the context words. The hidden layer contains the number of dimensions in which we want to represent current word present at the input layer.
+Implement the Continuous Bag Of Words (CBOW) Model Task to build the model are -
+a. Data preparation 
+ Data preparation is a crucial first step in the supervised learning workflow. This step involves the following tasks:
+b. Generate training data
+This step typically involves creating a clear separation between your training data and testing data as mentioned in data preparation. The training data consists of input features and their associated target labels. It's this data that is used to train the machine learning model. 
+c. Train model d. Output
+In this step, the machine learning model is trained using the training data. The training process involves feeding the model with input data and their corresponding labels, and the model adjusts its parameters to learn the underlying patterns in the data. The training process continues until a certain stopping criterion is met, often related to the model's performance on the validation data or after a set number of iterations or epochs, depending on the algorithm used.
+6.
+Transfer Learning:
+Transfer learning is a machine learning technique where a model trained on one task is adapted and fine-tuned to work on a second related task. It leverages the knowledge gained from one task to improve the performance on a different, but often closely related, task. Transfer learning is particularly valuable in scenarios where labeled training data for the target task is limited, as it allows the model to benefit from the wealth of data available for the source task.
+Freezing Parameter:
+Freezing parameters in the context of machine learning and deep learning refers to the practice of preventing the weights and biases of certain layers or parameters in a neural network from being updated during the training process. Instead, these frozen parameters remain fixed, and only the weights and biases of other parts of the network are updated.
+Trainable Layer:
+In the context of deep learning and neural networks, "trainable layers" refer to the specific layers within a model that have their weights and biases adjusted or updated during the training process. These layers are the parts of the model that learn from the input data and adapt their parameters to minimize a loss function, which measures the error between the model's predictions and the actual target values.
+
+
